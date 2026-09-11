@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Círculo: Una Decisión, Un Camino</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Pantalla de Inicio -->
+        <div id="start-screen" class="screen active">
+            <div class="logo-circle">⚠️</div>
+            <h1>EL CÍRCULO</h1>
+            <p class="subtitle">Un viaje de decisiones reales, adicción y consecuencias.</p>
+            <div class="intro-box">
+                <p>Este simulador demuestra lo fácil que es entrar en el mundo de las drogas y lo extremadamente difícil, doloroso y solitario que es salir de él. Tus decisiones afectan tu mente, tu cuerpo y tu entorno.</p>
+            </div>
+            <button id="start-btn" class="btn primary">Comenzar Dinámica</button>
+        </div>
+
+        <!-- Pantalla Principal de Juego -->
+        <div id="game-screen" class="screen">
+            <!-- Barra de Estado (Las 4 Dimensiones) -->
+            <div class="stats-panel">
+                <div class="stat-item">
+                    <span class="stat-label">🧠 Pensamiento</span>
+                    <div class="bar-container"><div id="bar-mind" class="bar fill-high" style="width: 100%;"></div></div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">👥 Entorno Social</span>
+                    <div class="bar-container"><div id="bar-social" class="bar fill-high" style="width: 100%;"></div></div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">🧬 Biología</span>
+                    <div class="bar-container"><div id="bar-bio" class="bar fill-high" style="width: 100%;"></div></div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">⚡ Est. Psicológico</span>
+                    <div class="bar-container"><div id="bar-psy" class="bar fill-high" style="width: 100%;"></div></div>
+                </div>
+            </div>
+
+            <!-- Caja de Escenario y Narrativa -->
+            <div class="scenario-box">
+                <div id="phase-indicator" class="phase-badge">Fase 1: La Apariencia de Control</div>
+                <h2 id="scenario-title">Cargando...</h2>
+                <p id="scenario-text">Cargando escenario...</p>
+            </div>
+
+            <!-- Opciones de Decisión -->
+            <div id="choices-container" class="choices-box">
+                <!-- Se generan dinámicamente -->
+            </div>
+        </div>
+
+        <!-- Pantalla de Final / Conclusión -->
+        <div id="end-screen" class="screen">
+            <div id="end-icon" class="logo-circle">🛑</div>
+            <h1 id="end-title">Fin del Camino</h1>
+            <div class="intro-box">
+                <p id="end-message">Mensaje final...</p>
+            </div>
+            <button id="restart-btn" class="btn primary">Reiniciar Dinámica</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
